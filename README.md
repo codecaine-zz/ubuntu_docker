@@ -31,6 +31,28 @@ sudo mv ubuntu_start.sh /usr/local/bin/ubuntu_start
 ubuntu_start
 ```
 
+## Inside the Ubuntu container
+
+After starting or attaching to the container, update packages and install `curl` before installing Homebrew:
+
+```bash
+apt -y update
+apt -y upgrade
+apt -y install curl git build-essential
+```
+
+Install Homebrew with:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Example packages to install with Homebrew:
+
+```bash
+brew install python3 bun vlang fd wget nmap btop bpython
+```
+
 ## Requirements
 
 - Docker must be installed and configured on the host machine.
