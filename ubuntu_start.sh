@@ -20,4 +20,3 @@ else
         -v "$HOST_DATA_DIR:/data" \
         -it ubuntu:latest bash
 fi
-ls
